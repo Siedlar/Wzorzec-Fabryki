@@ -5,7 +5,9 @@ public abstract class Figura {
     public void obliczObjetosc(){
 
     }
+public void wyswietlInfo(){
 
+}
 
 
 }
