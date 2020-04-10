@@ -10,7 +10,7 @@ public static void main(String[] args) throws InterruptedException {
     int zmienna2=1;
     do{
     do{
-    System.out.println("Wybierz figurę\n1.Kwadrat\n2.Prostokąt\n3.Wyjdz");
+    System.out.println("Wybierz figurę\n1.Kwadrat\n2.Prostokąt\n3.Kolo\n4.Trojkat\n5.Wyjdz");
     a = in.nextInt();
     switch (a) {
         case 1:
@@ -22,8 +22,14 @@ public static void main(String[] args) throws InterruptedException {
             figura = fabrykaFigur.stworzFigure(type);
             break;
         case 3:
-           System.exit(0);
-        }
+           type="Kolo";
+           figura=fabrykaFigur.stworzFigure(type);
+           break;
+
+        case 4:
+            type="Trojkat";
+            figura=fabrykaFigur.stworzFigure(type);
+    }
 
         if(figura==null) {
             System.out.println("Nie wybrales żadnej z powyższych akcji!! Spróbuj ponownie");
@@ -31,12 +37,12 @@ public static void main(String[] args) throws InterruptedException {
         }}while(figura==null);
     int zmienna=1;
     do{
-    System.out.println("Wybierz akcje\n1.Oblicz pole\n2.Oblicz objetosc\n3.Wyswietl info\n4.Zmien dane\n5.Wyjdz");
+    System.out.println("Wybierz akcje\n1.Oblicz pole\n2.Oblicz obwod\n3.Wyswietl info\n4.Zmien dane\n5.Wyjdz");
     a=in.nextInt();
     if(a==1){
         figura.obliczPole();
     }else if(a==2){
-        figura.obliczObjetosc();
+        figura.obliczObwod();
     }else if(a==3){
         figura.wyswietlInfo();
     }else if(a==4){

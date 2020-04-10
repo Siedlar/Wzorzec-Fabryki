@@ -1,6 +1,6 @@
 public class Kwadrat extends Figura {
    private int bok;
-   private final String nazwa="Kwadrat";
+   private static final String nazwa="Kwadrat";
 
     public int getBok() {
         return bok;
@@ -23,8 +23,8 @@ public class Kwadrat extends Figura {
     }
 
     @Override
-    public void obliczObjetosc() {
-        System.out.println("Objetosc wynosi: "+bok*bok*bok+ " cm sześciennych");
+    public void obliczObwod() {
+        System.out.println("Obwod wynosi: "+(4*bok)+ " cm ");
     }
 
     @Override

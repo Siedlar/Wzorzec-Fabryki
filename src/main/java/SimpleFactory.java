@@ -4,9 +4,6 @@ public class SimpleFactory {
   private Figura figura;
     private Scanner in;
 
-    public Figura getFigura() {
-        return figura;
-    }
 
     public Figura stworzFigure(String type){
         if(type.equals("Kwadrat")){
@@ -23,15 +20,20 @@ public class SimpleFactory {
             int a=in.nextInt();
             System.out.println("Podaj dlugość boku b");
             int b=in.nextInt();
-            System.out.println("Chcesz podać wysokość?\n1.Tak\n2.Nie");
-            zmienna=in.nextInt();
-            if(zmienna==1){
-                System.out.println("Podaj wysokość");
-                int c=in.nextInt();
-                figura=new Prostokąt(a,b,c);
-            }else if(zmienna==2){
                 figura=new Prostokąt(a,b);
             }
+        else if(type.equals("Trojkat")){
+            in=new Scanner(System.in);
+            System.out.println("Podaj długość boku ");
+            int a=in.nextInt();
+            System.out.println("Podaj wysokość");
+            int h=in.nextInt();
+            figura=new Trojkat(a,h);
+        }else if(type.equals("Kolo")){
+            in=new Scanner(System.in);
+            System.out.println("Podaj długość promienia");
+            int a=in.nextInt();
+            figura=new Kolo(a);
         }
         return figura;
     }
