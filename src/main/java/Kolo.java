@@ -24,6 +24,6 @@ public class Kolo extends Figura {
 
     @Override
     public void wyswietlInfo() {
-        super.wyswietlInfo();
+        System.out.println("Figura to: "+nazwa + " o promieniu"+ promien+" cm");;
     }
 }

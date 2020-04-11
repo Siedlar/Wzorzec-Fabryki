@@ -22,13 +22,16 @@ public class SimpleFactory {
             int b=in.nextInt();
                 figura=new Prostokąt(a,b);
             }
-        else if(type.equals("Trojkat")){
-            in=new Scanner(System.in);
+        else if(type.equals("Trojkat")) {
+            in = new Scanner(System.in);
             System.out.println("Podaj długość boku ");
-            int a=in.nextInt();
+            int a = in.nextInt();
             System.out.println("Podaj wysokość");
-            int h=in.nextInt();
-            figura=new Trojkat(a,h);
+            int h = in.nextInt();
+            figura = new Trojkat(a, h);
+
+
+
         }else if(type.equals("Kolo")){
             in=new Scanner(System.in);
             System.out.println("Podaj długość promienia");
